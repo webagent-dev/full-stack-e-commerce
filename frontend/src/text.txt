@@ -1,0 +1,38 @@
+  // console.log(slider[index])
+// const nextSlider = () => {
+//   setIndex((oldIndex) => {
+//     let index = oldIndex + 1
+//     if(index > slider.length - 1){
+//       index = 0
+//     }
+//     return index
+//   })
+// }
+// const prevSlider = () => {
+//   setIndex((oldIndex) => {
+//     let index = oldIndex - 1
+//     if(index < 0){
+//       index = slider.length -1 
+//     }
+//     return index
+//   })
+// }
+// useEffect(() => {
+//   const changeSlide = setInterval(() =>{
+//     setIndex((oldIndex) => {
+//     let index = oldIndex + 1
+//     if(index > slider.length - 1){
+//       index = 0
+//     }
+//     return index
+//   })
+//   },5000)
+//   return () => clearInterval(changeSlide)
+// },[index, slider.length])
+     // let position = 'nextSlider'
+              // if(sliderIndex === index){
+              //   position = 'activeSlide'
+              // }
+              // if(sliderIndex = index -1 || index === 0 ){
+              //      position = 'lastSlider'
+              //    }
