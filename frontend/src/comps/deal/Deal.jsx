@@ -1,16 +1,17 @@
 import React from 'react';
-import './deal.css'
+import {DealContainer,DealWrapper, DealText, Text, Close, Small  } from './deal.style'
+import { FaTimes} from 'react-icons/fa'
 function Deal(props) {
-  return <div className='deal__container'>
-      <div className="deal__wrapper">
-          <div className="deal__text">
-         <p>Super Deal Free shipping on order over $50</p>
-          </div>
-          <div className="close">
-              <small onClick={() => props.close(false)}>close</small>
-          </div>
-      </div>
-  </div>;
+  return <DealContainer>
+      <DealWrapper>
+          <DealText>
+            <Text>Super Deal Free shipping on order over $50</Text>
+          </DealText>
+          <Close>
+              <Small onClick={() => props.close(false)}><FaTimes /></Small>
+          </Close>
+      </DealWrapper>
+  </DealContainer>;
 }
 
 export default Deal;

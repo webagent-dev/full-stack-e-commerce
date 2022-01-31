@@ -3,7 +3,11 @@ import { default as Header } from './comps/header/Header'
 import { default as Slider } from './comps/slider/Slider'
 import { default as Category } from './comps/category/Category'
 import { default as Product } from './comps/product/Product'
+import { default as Newletter } from './comps/newletter/Newletter'
+import { default as Footer } from './comps/footer/Footer'
 import { default as data } from './data'
+import { default as ProductList } from './other/product/ProductList'
+import { default as Cat } from './other/cat/Cat'
 
 
 
@@ -11,5 +15,5 @@ import { default as data } from './data'
 
 
 export {
-    Deal, Header,Slider,data,Category,Product
+    Deal, Header,Slider,data,Category,Product, Cat,ProductList, Newletter,Footer
 }

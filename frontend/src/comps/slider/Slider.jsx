@@ -1,53 +1,71 @@
 import React, { useState, useEffect  } from 'react';
-import './slider.css'
+import './slider.style.js'
+import { SliderContainer, Arrow, SliderWrapper, SliderImage, Image, SliderText,Title, Desc, Button,SliderMainWrapper} from './slider.style'
+import { FaArrowLeft, FaArrowRight, FaAngleRight} from 'react-icons/fa'
 import { data } from '../../one'
 function Slider() {
   const [index, setIndex ] = useState(0)
-  const { image, title, desc} = data[index]
-  const checkError = (num) => { 
-      if(num > data.length -1){
-        return 0
-      }
-      if(num < 0){
-        return data.length -1
-      }
-      return num
+
+  // handleSlider function
+const handleSlider = (direction) => {
+  if(direction === 'left'){
+    setIndex(index > 0 ? index -1 : 3) 
+  }else{
+    setIndex(index < 3 ? index + 1 : 0)
   }
-  const prevSlider = () => {
-    setIndex((oldIndex) => {
-      let index = oldIndex - 1
-      return checkError(index)
-    })
-  }
-  const nextSlider = () => {
-    setIndex((oldIndex) => {
-      let index = oldIndex + 1
-      return checkError( index)      
-    })
-  }
-  useEffect(() => {
-    const changeSlider = setInterval(() => {
-        nextSlider()
-    },5000)
-    return () => clearInterval(changeSlider)
-  },[index])
+}
+//  old ways and the way i know
+// const nextSlider = (direction) => {
+//   if(direction === 'right'){
+//     setIndex((state) => {
+//       let index = state + 1
+//       if(index > data.length - 1){
+//         index = 0
+//       }
+//       return index
+//     })
+//   }
+// }
+
+// const prevSlider = (direction) => {
+//   if(direction === 'left'){
+//     setIndex((state) => {
+//       let index  = state - 1
+//       if(index < 0){
+//         index = data.length - 1
+//       }
+//       return index
+//     })
+//   }
+// }
+useEffect(() => {
+  const slider = setInterval(() => {
+  handleSlider('right')
+  },5000)
+  return () => clearInterval(slider)
+},[index, handleSlider])
+
   return (
-  <div className='slider__container'>
-         <span onClick={prevSlider} className="  arrow left">{'<'}</span>
-            <span onClick={nextSlider} className=" arrow right">{'>'}</span>
-          <article className=''>
-        <div className="slide__wrapper" >
-            <div className="slider__image">
-                <img src={image} alt="slider-pic" />
-            </div>
-            <div className="slider__text">
-                <h1>{title}</h1>
-                <p>{desc}</p>
-                <button className="slider__btn">shop now *</button>
-        </div>
-        </div>
-        </article>
-       </div> 
+  <SliderContainer>
+         < Arrow direction='left' onClick={() => handleSlider('left')}> <FaArrowLeft  size='20px' /></ Arrow>
+            < Arrow direction='right' onClick={() => handleSlider('right')}> <FaArrowRight size='20px' /></ Arrow>
+            <SliderMainWrapper index={index}>
+          {
+                data.map((data) => (
+            <SliderWrapper key={data.id} bg={data.bg} >
+            <SliderImage>
+                <Image src={data.image} alt="slider-pic" />
+            </SliderImage>
+             <SliderText text={data.text}>
+                <Title>{data.title}</Title>
+                <Desc>{data.desc}</Desc>
+                < Button>shop now <FaAngleRight /></ Button>
+        </SliderText>
+        </SliderWrapper>          
+            ))
+          }
+          </SliderMainWrapper>
+       </SliderContainer> 
   )
 }
 

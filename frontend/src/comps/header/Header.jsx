@@ -1,37 +1,47 @@
 import React, { useState} from 'react';
-import './header.css'
+import './header.style.js'
+import {  FaAngleDown, FaSistrix } from 'react-icons/fa'
+import { GrCart} from 'react-icons/gr'
+import Badge from '@mui/material/Badge';
+
+import { HeaderContainer, 
+    HeaderWrapper, 
+    HeaderLang, Lang, 
+    Search, SearchInput, HeaderLogo, 
+    HeaderUser, Auth, 
+    AuthBtn,LangText, LogoText
+}
+     from './header.style'
 function Header() {
     const [menu, setMenu] = useState(false)
-  return <div className='header__container'>
-      <div className="header__wrapper">
-               <div className="header_lang">
-                   <div className="lang">
-                       <h2>EN</h2>
-                          +
-                   </div>
-                   <div className="search">
-                       <input className='search__input' type="text" placeholder='Search' />
-               
-                           *
-
-                   </div>
-               </div>
-               <div className="header__logo">
-                    <h2>Shopy.</h2>
-               </div>
-               <div className="header__user">
-                   <div className="auth">
-                       <button className="auth__btn">Register</button>
-                   </div>
-                   <div className="auth">
-                       <button className="auth__btn">Sign In</button>
-                   </div>
-                   <div className="cart">
-                       <h3>cart</h3>
-                   </div>
-               </div>
-      </div>
-  </div>;
+  return <HeaderContainer>
+      <HeaderWrapper>
+               <HeaderLang>
+                   <Lang>
+                       <LangText>EN</LangText>
+                            <FaAngleDown />
+                   </Lang>
+                   < Search>
+                       <SearchInput  type="text" placeholder='Search' />
+                <FaSistrix />
+                   </Search>
+               </HeaderLang>
+               <HeaderLogo>
+                    <LogoText>Shopy.</LogoText>
+               </HeaderLogo>
+               <HeaderUser>
+                   <Auth>
+                       <AuthBtn>Register</AuthBtn>
+                   </Auth>
+                   <Auth>
+                       <AuthBtn >Sign In</AuthBtn>
+                   </Auth>
+                <Badge badgeContent={4} color="success">
+                <GrCart  size='25px'/>
+        </Badge>
+               </HeaderUser>
+      </HeaderWrapper>
+  </HeaderContainer>;
 }
 
 export default Header;

@@ -10,5 +10,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
     "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "server": " nodemon index.js"
   }
 }
