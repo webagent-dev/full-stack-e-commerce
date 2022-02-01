@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Title, FilterContainer, Filter, Select, Option, FilterHeader} from './singleproduct.style'
-function SingleProduct() {
+import { Container, Title, FilterContainer, Filter, Select, Option, FilterHeader} from './listproduct.style'
+function ListProduct() {
   return (
   <Container>
       <Title>Dresses</Title>
@@ -39,4 +39,4 @@ function SingleProduct() {
   )
 }
 
-export default SingleProduct;
+export default ListProduct;

@@ -1,6 +1,8 @@
 import './App.css'; 
 import Container from './pages/Container'
 import Products from './pages/Products'
+import Single from './pages/Single'
+import Cart from './pages/Cart'
 import  {createGlobalStyle } from 'styled-components'
 import { Routes, Route} from 'react-router-dom'
 
@@ -26,6 +28,8 @@ function App() {
       <Routes>
       <Route path='/'  element={ <Container />} />
       <Route path='/products'  element={    <Products /> } />
+      <Route path='/products/:id'  element={    <Single /> } />
+      <Route path='/cart'  element={    <Cart /> } />
       </Routes>
     </div>
   );

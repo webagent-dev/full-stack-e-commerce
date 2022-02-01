@@ -1,6 +1,6 @@
 import React,{ useState} from 'react';
 import styled from 'styled-components'
-import { Header, Deal, Newletter,Product, Footer, SingleProduct } from '../one'
+import { Header, Deal, Newletter,Product, Footer, ListProduct } from '../one'
 const SingleProducts = styled.div`
 `
 function Products() {
@@ -9,7 +9,7 @@ function Products() {
        <SingleProducts>
            <Header />
          {deal && <Deal  close={setDeal} /> }
-         <SingleProduct />
+         <ListProduct />
          <Product />
          < Newletter /> 
          <Footer />
