@@ -1,6 +1,9 @@
 import './App.css'; 
 import Container from './pages/Container'
+import Products from './pages/Products'
 import  {createGlobalStyle } from 'styled-components'
+import { Routes, Route} from 'react-router-dom'
+
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -20,7 +23,10 @@ function App() {
   return (
    <div className="App">
       <GlobalStyle />
-      <Container />
+      <Routes>
+      <Route path='/'  element={ <Container />} />
+      <Route path='/products'  element={    <Products /> } />
+      </Routes>
     </div>
   );
 }

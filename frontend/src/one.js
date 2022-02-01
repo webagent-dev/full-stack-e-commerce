@@ -4,6 +4,7 @@ import { default as Slider } from './comps/slider/Slider'
 import { default as Category } from './comps/category/Category'
 import { default as Product } from './comps/product/Product'
 import { default as Newletter } from './comps/newletter/Newletter'
+import { default as SingleProduct } from './comps/single/SingleProduct'
 import { default as Footer } from './comps/footer/Footer'
 import { default as data } from './data'
 import { default as ProductList } from './other/product/ProductList'
@@ -15,5 +16,5 @@ import { default as Cat } from './other/cat/Cat'
 
 
 export {
-    Deal, Header,Slider,data,Category,Product, Cat,ProductList, Newletter,Footer
+    Deal, Header,Slider,data,Category,Product, Cat,ProductList, Newletter,Footer, SingleProduct
 }
