@@ -3,6 +3,7 @@ import Container from './pages/Container'
 import Products from './pages/Products'
 import Single from './pages/Single'
 import Cart from './pages/Cart'
+import Register from './pages/Register'
 import  {createGlobalStyle } from 'styled-components'
 import { Routes, Route} from 'react-router-dom'
 
@@ -30,6 +31,7 @@ function App() {
       <Route path='/products'  element={    <Products /> } />
       <Route path='/products/:id'  element={    <Single /> } />
       <Route path='/cart'  element={    <Cart /> } />
+      <Route path='/register'  element={    <Register /> } />
       </Routes>
     </div>
   );

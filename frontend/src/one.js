@@ -10,6 +10,7 @@ import { default as Footer } from './comps/footer/Footer'
 import { default as Carts } from './comps/cart/Carts'
 import { default as data } from './data'
 import { default as ProductList } from './other/product/ProductList'
+import { default as CartList } from './other/cartList/CartList'
 import { default as Cat } from './other/cat/Cat'
 
 
@@ -19,5 +20,5 @@ import { default as Cat } from './other/cat/Cat'
 
 export {
     Deal, Header,Slider,data,Category,Product, Cat,ProductList, Newletter,
-    Footer, ListProduct, Carts, Singlepage
+    Footer, ListProduct, Carts, Singlepage, CartList
 }
