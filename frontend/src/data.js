@@ -1,7 +1,7 @@
 const data = [
     {
         id:1,
-        image: '/assets/image1.png',
+        image: '/assets/pro-5.png',
         title: 'Summer Sale',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laudantium adipisci. Deserunt debitis adipisci facere..!',
         bg: 'gray',
@@ -9,7 +9,7 @@ const data = [
     },
     {
         id:2,
-        image: '/assets/image2.png',
+        image: '/assets/slide-1.png',
         title: 'Best Discount Of Sells',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laudantium adipisci. Deserunt debitis adipisci facere..!',
             bg: 'orange',
@@ -17,7 +17,7 @@ const data = [
     },
     {
         id:3,
-        image: '/assets/image3.png',
+        image: '/assets/slide-2.png',
         title: 'Uni sex Type Clothing',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laudantium adipisci. Deserunt debitis adipisci facere..!',
           bg: 'coral',
@@ -25,7 +25,7 @@ const data = [
     },
     {
         id:4,
-        image: '/assets/image4.png',
+        image: '/assets/best.png',
         title: 'Dont miss the best offer',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laudantium adipisci. Deserunt debitis adipisci facere..!',
           bg: 'seagreen',
@@ -37,66 +37,86 @@ export const cat = [
         {
             id: 1,
             title: 'shirt style',
-            image: '/assets/cat1.png'
+            image: '/assets/cat-.jpg'
         },
         {
             id: 2,
             title: 'Loungewear love',
-                image: '/assets/cat2.jpg'
+                image: '/assets/cat-2.jpg'
         },
         {
             id: 3,
             title: 'light jackets',
-                image: '/assets/cat3.jpg'
+                image: '/assets/cat-3.jpg'
         },
         {
            id: 4,
          title: 'New dresses',
-          image: '/assets/image3.png',
+          image: '/assets/cat-4.jpg',
      },
         {
           id: 5,
            title: 'the perfect jeans',
-             image: '/assets/image4.png',
+             image: '/assets/pro-4.jpg',
          },
     ]
 
    export  const product = [
         {
             id:1,
-      image: '/assets/image1.png',     
+      image: '/assets/pro-1.png',     
        },
         {
             id:2,
-              image: '/assets/image2.png',
+              image: '/assets/pro-2.png',
         },
         {
             id:3,
-         image: '/assets/image3.png',
+         image: '/assets/pro-3.png',
         },
         {
             id:4,
-                image: '/assets/image4.png',
+                image: '/assets/pro-4.png',
         },
         {
             id:5,
-          image: '/assets/cat1.png'
+          image: '/assets/pro-5.png'
         },
         {
             id:6,
-     image: '/assets/cat2.jpg'
+     image: '/assets/cloth-1.png'
         },
         {
             id:7,
-         image: '/assets/cat3.jpg'
+         image: '/assets/cloth-2.png'
         },
         {
             id:8,
-                 image: '/assets/image3.png',
+                 image: '/assets/cloth-3.png',
         },
-        // {
-        //     id:9,
-        //   image: '/assets/image2.png',
-        // },
+        {
+            id:9,
+          image: '/assets/cloth-4.png',
+        },
+        {
+            id:9,
+          image: '/assets/cloth-5.png',
+        },
+        {
+            id:9,
+          image: '/assets/cloth-6.png',
+        },
+        {
+            id:9,
+          image: '/assets/shoe-1.png',
+        },
+        {
+            id:9,
+          image: '/assets/shoe-2.png',
+        },
+        {
+            id:9,
+          image: '/assets/shoe-3.png',
+        },
     ]
 export default data

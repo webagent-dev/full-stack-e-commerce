@@ -6,7 +6,7 @@ function SingleProduct() {
     <SingleContainer>
       <SingleWrapper>
         <ImageWrapper>
-          <Image />
+          <Image src='/assets/pro-2.png' alt='single-' />
         </ImageWrapper>
         <SingleContent>
           <Title>The Product Name</Title>

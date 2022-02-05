@@ -17,9 +17,10 @@ export const SingleWrapper = styled.div`
 export const ImageWrapper = styled.div`
     width: 100%;
     flex: 1;
-    background: lightgray;
 `
-export const Image = styled.div``
+export const Image = styled.img`
+    width: 100%
+`
 export const SingleContent = styled.div`
     flex: 1;
     display: flex;
