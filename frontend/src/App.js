@@ -4,6 +4,7 @@ import Products from './pages/Products'
 import Single from './pages/Single'
 import Cart from './pages/Cart'
 import Register from './pages/Register'
+import Login  from './pages/Login'
 import  {createGlobalStyle } from 'styled-components'
 import { Routes, Route} from 'react-router-dom'
 
@@ -20,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   width: 100vw;
   background: lightgray;
   overflow: hidden; 
+  background: red;
 }
 `
 function App() {
@@ -32,6 +34,7 @@ function App() {
       <Route path='/products/:id'  element={    <Single /> } />
       <Route path='/cart'  element={    <Cart /> } />
       <Route path='/register'  element={    <Register /> } />
+      <Route path='/login'  element={    <Login /> } />
       </Routes>
     </div>
   );

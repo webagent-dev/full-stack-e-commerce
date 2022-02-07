@@ -4,7 +4,7 @@ import { FaMinus, FaPlus} from 'react-icons/fa'
  const CartList = () => {
     return (
         <CartListContainer>
-         <Image />
+         <Image src='/pro-4.jpg' alt='check_out' />
          <Content>
              <Detail>
                     <Wrapper>
@@ -23,9 +23,9 @@ import { FaMinus, FaPlus} from 'react-icons/fa'
              </Detail>
              <Other>
             <Counter>
-                <FaMinus />
+                <FaMinus  size='12px'/>
                 <Show>3</Show>
-        <FaPlus />
+        <FaPlus  size='12px' />
             </Counter>
             <Price>$ 50</Price>
              </Other>

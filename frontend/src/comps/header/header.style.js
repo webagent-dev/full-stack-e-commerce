@@ -6,18 +6,29 @@
     background: whitesmoke;
     display: flex;
     align-items: center;
+
+    @media(max-width: 620px){
+
+    }
  `
  export const HeaderWrapper = styled.div`
      width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+      @media(max-width: 620px){
+             width: 100%;
+    }
     `
  export const HeaderLang    = styled.div`
      flex: 1;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
+              @media(max-width: 620px){
+            display: none;
+    }
  `
  export const Lang  = styled.div`
      display: flex;
@@ -58,6 +69,11 @@ outline: none;
         align-items: center;
         justify-content: flex-end;
         gap: 2rem;
+
+
+        @media(max-width: 620px){
+        display: none;
+    }
         `
   export const Auth = styled.div`
   
@@ -69,4 +85,13 @@ outline: none;
     padding: 3px 10px;
     background: transparent;
     cursor: pointer;
+    `
+
+    export const Toggle = styled.div`
+        display: none;
+        padding: 0 20px;
+
+              @media(max-width: 620px){
+             display: block;
+    }
     `

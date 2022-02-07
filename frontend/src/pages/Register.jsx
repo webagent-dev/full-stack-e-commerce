@@ -17,7 +17,7 @@ const Register = () => {
                 <Input   type='password'  placeholder='confirm password' />
                 </InputWrapper>
                 <Text> By creating an account. I consent to the processing of my personal of my personal data in accordance with the <Span>PRIVACY POLICY</Span></Text>
-                <Send>CREATE</Send>
+                <Send type='submit'>CREATE</Send>
             </Wrapper>
         </RegisterContainer>
     )

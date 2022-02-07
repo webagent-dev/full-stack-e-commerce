@@ -6,11 +6,21 @@ flex:1;
 margin: 3px;
 height: 60vh;
  position: relative;
+       @media(max-width: 760px){
+         height: auto;
+    }
+            
  `
   export const Image = styled.img`
   width: 100%;
   object-fit: cover;
   height: 100%;
+  /* max-height: 300px; */
+
+        @media(max-width: 760px){
+            width: 80%;
+            object-fit: contain;
+    }
   `
 
     export const CatContent = styled.div`
@@ -31,6 +41,11 @@ gap: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
   font-family: helvatica;
+  text-align: center;
+                 @media(max-width: 620px){
+                    font-size: 1.2rem;
+                
+    }
     `
   export const Button = styled.button`
     padding: .7rem 1rem;
@@ -39,4 +54,10 @@ gap: 1.5rem;
 outline: none;
 text-transform: uppercase;
 cursor: pointer;
+      @media(max-width: 760px){
+         font-size: 20px;
+    }
+                 @media(max-width: 620px){
+                   font-size: 15px;
+    }
   `

@@ -12,6 +12,13 @@ font-family: monospace;
 export const NewletterTitle = styled.h1`
 font-size: 70px;
 margin-bottom: 25px;
+
+  @media(max-width: 760px){
+    font-size: 60px;
+    }
+                 @media(max-width: 620px){
+                    font-size: 40px;
+    }
 `
 export const NewletterDesc = styled.p`
     font-weight: 24px;

@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import './header.style.js'
-import {  FaAngleDown, FaSistrix } from 'react-icons/fa'
+import {  FaAngleDown, FaSistrix, FaBars } from 'react-icons/fa'
 import { GrCart} from 'react-icons/gr'
 import Badge from '@mui/material/Badge';
 
@@ -9,7 +9,8 @@ import { HeaderContainer,
     HeaderLang, Lang, 
     Search, SearchInput, HeaderLogo, 
     HeaderUser, Auth, 
-    AuthBtn,LangText, LogoText
+    AuthBtn,LangText, LogoText,
+    Toggle
 }
      from './header.style'
 function Header() {
@@ -34,12 +35,15 @@ function Header() {
                        <AuthBtn>Register</AuthBtn>
                    </Auth>
                    <Auth>
-                       <AuthBtn >Sign In</AuthBtn>
+                       <AuthBtn >Login</AuthBtn>
                    </Auth>
-                <Badge badgeContent={4} color="success">
+               </HeaderUser>
+                  <Badge badgeContent={4} color="success">
                 <GrCart  size='25px'/>
         </Badge>
-               </HeaderUser>
+<Toggle>
+    <FaBars size='25px' />
+</Toggle>
       </HeaderWrapper>
   </HeaderContainer>;
 }

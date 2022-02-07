@@ -6,20 +6,36 @@ height: 90vh;
 padding: 20px;
 margin-top: 2rem;
 font-family: monospace;
+                    @media(max-width: 620px){
+                        height:  auto;
+    }
 `
 export const SingleWrapper = styled.div`
     width: 90%;
     height: 100%;
      margin: 0 auto;
      display: flex;
+     /* flex-wrap: wrap; */
      gap:2rem;
+                    @media(max-width: 960px){
+                        flex-direction: column;
+    }
 `
 export const ImageWrapper = styled.div`
     width: 100%;
     flex: 1;
+
+                  @media(max-width: 620px){
+             flex: 2;
+    }
 `
 export const Image = styled.img`
-    width: 100%
+    width: 100%;
+    object-fit: center;
+
+        @media(max-width: 620px){
+       object-fit: contain;
+    }
 `
 export const SingleContent = styled.div`
     flex: 1;

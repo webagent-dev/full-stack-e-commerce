@@ -1,7 +1,10 @@
 import React, {useState } from 'react';
 import styled from 'styled-components'
 import {Deal, Header, Slider, Product, Category, Newletter, Footer } from '../one'
-const Containers = styled.div``
+const Containers = styled.div`
+  width: 100%;
+  overflow: hidden;
+`
 function Container() {
     const [deal, setDeal ] = useState(true)
   return (

@@ -8,22 +8,34 @@ display: flex;
 gap: 1rem;
 border-bottom: 1px solid lightgray;
 /* align-items: center; */
+
+@media(max-width: 600px){
+    /* height: auto; */
+}
 `
 
 
 export const Image = styled.image`
     width: 100%;
     height:  85%;
-background: gray;
-    background: gray;
 flex: 1;
+@media(max-width: 600px){
+ flex: 2;
+ height: 100%;
+}
 `
 export const Content = styled.div`
     flex: 3;
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
-   
+
+   @media(max-width: 600px){
+       flex: 1;
+       width: 100%;
+    justify-content: space-between;
+}
+
 ` 
 export const Detail = styled.div`
 display: flex;
@@ -40,10 +52,17 @@ export const Title = styled.div`
 font-weight: 700;
 font-size: 20px;
 font-family: monospace;
+
+@media(max-width: 600px){
+    font-size: 15px;
+}
 ` 
 export const Value = styled.div`
 font-family: cursive;
 color: gray;
+@media(max-width: 600px){
+    font-size: 10px;
+}
 ` 
 export const Color = styled.div`
 width: 20px;
@@ -51,6 +70,10 @@ height: 20px;
 border: black;
 background: red;
 border-radius: 50%;
+@media(max-width: 600px){
+    width: 20px;
+    height: 20px;
+}
 ` 
 export const Other = styled.div`
     display: flex;
@@ -68,8 +91,14 @@ export const Price = styled.div`
     font-weight: 700;
     font-size: 35px;
     font-family: cursive;
+    @media(max-width: 600px){
+    font-size: 20px;
+}
 `
 export const Show = styled.div`
     font-size: 20px;
     font-family: cursive;
+    @media(max-width: 600px){
+    font-size: 10px;
+}
 ` 
