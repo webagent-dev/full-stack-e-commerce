@@ -7,10 +7,8 @@ const verifyToken = async (req,res,next) => {
     }else{
            try{
                 const token = authHeader.split(' ')[2]
-                console.log(token)
                 jwt.verify(token, process.env.MY_CODE,(err, user) => {
                     if(err){
-                        console.log(err.message)
                         return res.status(404).json('invalid token please try again')
                     }else{
                         req.user = user
@@ -25,6 +23,8 @@ const verifyToken = async (req,res,next) => {
 
 const verifyTokenAndAdmin = (req,res,next) => {
     verifyToken(req,res, () => {
+        console.log(req.user.id === req.params.id)
+        console.log(req.user.isAdmin)
         if(!req.user.id === req.params.id ||!req.user.isAdmin){
              res.status(403).json('you are not allowed to access this page')
         }else{
@@ -36,10 +36,9 @@ const verifyTokenAndAdmin = (req,res,next) => {
 const verifyTokenOnlyAdmin = (req,res,next) => {
     verifyToken(req,res,() => {
         if(!req.user.isAdmin){
-            res.status(403).json('you are not allowed to access this page')
-         
+          res.status(403).json('you are not allowed to access this page')
         }else{
-                    next()
+              return   next()
         }
     })
 }

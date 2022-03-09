@@ -1,13 +1,13 @@
 
 import { CatWrapper, CatContent, Image, Header, Button } from './cat.style'
-
+import { Link } from 'react-router-dom'
 function Cat({item}) {
   return (
             <CatWrapper>  
   <Image  src={item.image} alt='cat__pic'/>
          < CatContent>
     < Header>  {item.title} </Header>
-            < Button>Shop Now</ Button>
+          <Link to={`/products/${item.cat}`}>   < Button>Shop Now</ Button> </Link>
     </ CatContent>
       </CatWrapper>
   )

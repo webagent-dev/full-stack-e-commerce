@@ -3,8 +3,9 @@ const userModel = require('../models/user.model')
 const bcrypt = require('bcrypt')
 const register = async (req,res) => {
     try{
-        const user = new userModel(req.body)  
-        const createUser = await user.save(user)
+            const user = await userModel.create({...req.body})
+            const { password, ...other} = user._doc
+            res.status(201).json({...other})
      res.status(201).json(createUser)
     }catch(err){
         res.status(500).json(err.message)
