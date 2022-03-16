@@ -1,53 +1,55 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, { useState, useContext, useEffect} from 'react';
 import { ProductContainer } from './product.style'
 import { ProductList } from '../../one'
+import { useLocation } from 'react-router-dom'
 import { AppContext } from '../../context/Appcontext'
 import axios from 'axios'
+// const product = [1,2,3,4,5,]
 function Product() {
-  const  { cat, filter, sort  } = useContext(AppContext)
-  const [product, setProduct ] = useState([])
-  const [filterProduct, setFilterProduct ] = useState([]) 
-
+  const { setCat, cat, filter, sort} = useContext(AppContext)
+  const [filterProduct, setFilterProduct] = useState([])
+  const [product, setProduct] = useState([])
+  // const [ cat, setCat] = useState()
+const location = useLocation()
+  setCat( location.pathname.split('/')[2])
   useEffect(() => {
     const getProduct = async () => {
-      const res =  await axios.get( cat ?
+      const res = await axios.get( cat ?
          `http://localhost:8080/api/v1/product/main_product?category=${cat}`
-         : 'http://localhost:8080/api/v1/product/main_product'
-      )
-     setProduct(res.data)
+      : 'http://localhost:8080/api/v1/product/main_product'
+    )
+        setProduct(res.data)
     }
     getProduct()
-  },[cat, setProduct])
+  },[cat])
 
   useEffect(() => {
-    cat &&  setFilterProduct( 
-       product && product.filter((item) => Object.entries( filter&& filter).every(([key, value]) => console.log('this is ', key, 'and this is', value)))
-    )
-  },[cat, product,filter])
+    cat && setFilterProduct(product?.filter((item) => Object.entries(filter).every(([key, value]) => item[key].includes(value))))
+  }, [cat, product, filter])
+
   useEffect(() => {
     if((sort === 'newest')){
-      setFilterProduct((prev) => {
-       [...prev].sort((a, b) => a.createdAt - b.createdAt)
-      })
+        setFilterProduct((prev) => {
+          [...prev].sort((a,b) => a.createdAt - b.createdAt)
+        })
     }else if((sort === 'asc')){
-         setFilterProduct((prev) => {
-       [...prev].sort((a, b) => a.price - b.price)
+      setFilterProduct((prev) => {
+        [...prev].sort((a,b) => a.price - b.price)
       })
     }else{
-         setFilterProduct((prev) => {
-       [...prev].sort((a, b) => b.price - a.price)
-      })
+        setFilterProduct((prev) => {
+          [...prev].sort((a,b) => b.price - a.price)
+        })
     }
-  },[sort, setFilterProduct])
-  // console.log('this is product', product, 'this is filter product', filterProduct)
+  },[sort])
   return(
      <ProductContainer>
-       {
-        cat ? 
-        filterProduct?.map((item) =>  <ProductList  item={item} key={filterProduct.id}/>)
-        :
-        product?.slice(0,8).map((item) =>  <ProductList  item={item} key={product.id}/>)
-     }
+       {  
+       cat ? 
+        filterProduct?.map((item) =>  <ProductList item={item} />)
+        :   product?.slice(0,8).map((item) =>  <ProductList item={item} />)
+       
+       }
   </ProductContainer>
   )
 }

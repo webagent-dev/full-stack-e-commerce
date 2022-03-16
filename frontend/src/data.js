@@ -36,34 +36,34 @@ const data = [
 export const cat = [
         {
             id: 1,
-            title: 'shirt style',
-            image: '/assets/cat-.jpg',
+            title: 'Man Wears',
+          image: '/assets/cat-man.jpg',
             cat: "man"
         },
         {
             id: 2,
-            title: 'Loungewear love',
-                image: '/assets/cat-2.jpg',
+            title: 'Woman Wears',
+             image: '/assets/cat-4.jpg',
                   cat: "woman"
         },
         {
             id: 3,
-            title: 'light jackets',
-                image: '/assets/cat-3.jpg',
-                  cat: "man"
+            title: 'Uni-Sex Cloths',
+                image: '/assets/cat-uni.jpg',
+                  cat: "uni-sex"
         },
-        {
-           id: 4,
-         title: 'New dresses',
-          image: '/assets/cat-4.jpg',
-            cat: "woman"
-     },
-        {
-          id: 5,
-           title: 'the perfect jeans',
-             image: '/assets/pro-4.jpg',
-               cat: "man"
-         },
+    //     {
+    //        id: 4,
+    //      title: 'New dresses',
+    //       image: '/assets/cat-4.jpg',
+    //         cat: "woman"
+    //  },
+    //     {
+    //       id: 5,
+    //        title: 'the perfect jeans',
+    //          image: '/assets/pro-4.jpg',
+    //            cat: "man"
+    //      },
     ]
 
    export  const product = [

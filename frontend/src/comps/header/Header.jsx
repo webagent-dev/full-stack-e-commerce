@@ -3,6 +3,7 @@ import './header.style.js'
 import {  FaAngleDown, FaSistrix, FaBars } from 'react-icons/fa'
 import { GrCart} from 'react-icons/gr'
 import Badge from '@mui/material/Badge';
+import { Link } from 'react-router-dom'
 
 import { HeaderContainer, 
     HeaderWrapper, 
@@ -28,7 +29,9 @@ function Header() {
                    </Search>
                </HeaderLang>
                <HeaderLogo>
+                   <Link to='/'>
                     <LogoText>Shopy.</LogoText>
+                    </Link>
                </HeaderLogo>
                <HeaderUser>
                    <Auth>
