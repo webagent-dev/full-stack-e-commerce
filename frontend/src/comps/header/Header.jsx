@@ -4,6 +4,8 @@ import {  FaAngleDown, FaSistrix, FaBars } from 'react-icons/fa'
 import { GrCart} from 'react-icons/gr'
 import Badge from '@mui/material/Badge';
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getQuantity } from '../../feature/cartSlice'
 
 import { HeaderContainer, 
     HeaderWrapper, 
@@ -16,6 +18,7 @@ import { HeaderContainer,
      from './header.style'
 function Header() {
     const [menu, setMenu] = useState(false)
+    const num =   useSelector(getQuantity)
   return <HeaderContainer>
       <HeaderWrapper>
                <HeaderLang>
@@ -41,8 +44,10 @@ function Header() {
                        <AuthBtn >Login</AuthBtn>
                    </Auth>
                </HeaderUser>
-                  <Badge badgeContent={4} color="success">
+                  <Badge badgeContent={num} color="success">
+                      <Link to='/cart'>
                 <GrCart  size='25px'/>
+                </Link>
         </Badge>
 <Toggle>
     <FaBars size='25px' />

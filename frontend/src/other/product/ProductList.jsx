@@ -3,7 +3,6 @@ import { ProductListContainer, ProductListWrapper, ImageWrapper, Image, ProductL
 import {MdOutlineLocalGroceryStore, MdSearch, MdOutlineFavoriteBorder, } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 function ProductList({item}) {
-console.log(item)
   return(
       <ProductListContainer>
           <ProductListWrapper  />

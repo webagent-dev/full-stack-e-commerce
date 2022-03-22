@@ -31,7 +31,8 @@ export const ImageWrapper = styled.div`
 `
 export const Image = styled.img`
     width: 100%;
-    object-fit: center;
+    height: 80%;
+    object-fit: contain;
 
         @media(max-width: 620px){
        object-fit: contain;
@@ -68,6 +69,7 @@ export const Select = styled.select`
     outline: none;
     border: 1px solid gray;
     border-radius: 4px;
+    text-transform: uppercase;
 `
 export const Header = styled.h2``
 export const Option = styled.option`` 
@@ -77,6 +79,15 @@ height: 20px;
 border: 1px solid white;
 background: ${props => props.bg};
 border-radius: 50%;
+ transform: scale(1);
+ transition: all .5s linear;
+
+&:hover{
+    transform: scale(1.2);
+}
+&:active{
+    border: 8px solid black;
+}
 ` 
 export const ColorWrapper = styled.div`
 display: flex;

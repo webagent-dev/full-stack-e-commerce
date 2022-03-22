@@ -1,19 +1,20 @@
 
 import { CartListContainer, Image,Content, Detail, Wrapper, Title, Value, Color, Other, Counter, Price, Show} from './cartlist.style'
 import { FaMinus, FaPlus} from 'react-icons/fa'
- const CartList = () => {
+ const CartList = ({data}) => {
+     console.log(data)
     return (
         <CartListContainer>
-         <Image src='/pro-4.jpg' alt='check_out' />
+         <Image src={data.product.photoURL} alt='check_out' />
          <Content>
              <Detail>
                     <Wrapper>
                         <Title>Product:</Title>
-                        <Value>The product Name</Value>
+                        <Value>{data.product.name}</Value>
                     </Wrapper>
                     <Wrapper>
                         <Title>ID:</Title>
-                        <Value>65956785982</Value>
+                        <Value>{data.product._id}</Value>
                     </Wrapper>
                     <Color />
                        <Wrapper>
@@ -24,10 +25,10 @@ import { FaMinus, FaPlus} from 'react-icons/fa'
              <Other>
             <Counter>
                 <FaMinus  size='12px'/>
-                <Show>3</Show>
+                <Show>{data.product.que}</Show>
         <FaPlus  size='12px' />
             </Counter>
-            <Price>$ 50</Price>
+            <Price>${data.price}</Price>
              </Other>
          </Content>
         </CartListContainer>

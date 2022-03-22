@@ -4,7 +4,6 @@ import { ProductList } from '../../one'
 import { useLocation } from 'react-router-dom'
 import { AppContext } from '../../context/Appcontext'
 import axios from 'axios'
-// const product = [1,2,3,4,5,]
 function Product() {
   const { setCat, cat, filter, sort} = useContext(AppContext)
   const [filterProduct, setFilterProduct] = useState([])
@@ -47,7 +46,7 @@ const location = useLocation()
        {  
        cat ? 
         filterProduct?.map((item) =>  <ProductList item={item} />)
-        :   product?.slice(0,8).map((item) =>  <ProductList item={item} />)
+        :   product?.slice(0,8).sort((a,b) => b.price - a.price).map((item) =>  <ProductList item={item} />)
        
        }
   </ProductContainer>

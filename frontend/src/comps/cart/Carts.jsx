@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components'
 import { CartContainer, CartWrapper, Head, Button, Title, Content, CartContent, Summary,Text,Underline,Detail, Price, Total, CartListWrapper} from './cart.style'
 import { CartList } from '../../one'
-const cart = [1,2,3,4,5,6,7,8]
+import { useSelector } from 'react-redux'
+import { getProduct } from '../../feature/cartSlice'
 function Carts() {
+  const cart = useSelector(getProduct)
   return (
       <CartContainer>
         <Head>YOUR BAG</Head>
@@ -18,7 +20,7 @@ function Carts() {
           <Content>
             <CartListWrapper>
                 {
-            cart.map((item, i) =>(   <CartList key={i}/>))
+            cart.map((item) =>(   <CartList key={item._id} data={item}/>))
           }
             </CartListWrapper>
         

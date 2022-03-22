@@ -11,8 +11,6 @@ import Login  from './pages/Login'
 // import Sucess from './comps/stripe-test/Sucess'
 import  {createGlobalStyle } from 'styled-components'
 import { Routes, Route} from 'react-router-dom'
-
-
 const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
@@ -29,8 +27,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `
 function App() {
-  const user = false
-  
+  const user = true
   return (
    <div className="App">
       <GlobalStyle />

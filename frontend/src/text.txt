@@ -3,6 +3,11 @@ image links
  uni-sex
 https://cdn.pixabay.com/photo/2016/04/01/12/01/cap-1300471_960_720.png
 https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310__340.png
+https://cdn.pixabay.com/photo/2017/02/15/11/42/t-shirt-2068353__340.png
+https://cdn.pixabay.com/photo/2020/04/05/13/14/protective-mask-5006098__340.png
+https://cdn.pixabay.com/photo/2012/04/24/23/28/pants-41115__340.png
+https://cdn.pixabay.com/photo/2012/04/02/12/53/socks-24411__340.png
+https://cdn.pixabay.com/photo/2012/04/13/14/46/cover-32683__340.png
 
 
 woman
@@ -11,6 +16,9 @@ https://cdn.pixabay.com/photo/2016/03/31/19/19/cloth-1294908__480.png
 https://cdn.pixabay.com/photo/2018/10/23/06/19/wedding-dress-3767136__480.png
 https://cdn.pixabay.com/photo/2018/10/28/06/14/lace-dress-3777984__480.png
 https://cdn.pixabay.com/photo/2013/07/12/19/21/pumps-154636__180.png
+https://cdn.pixabay.com/photo/2013/07/13/14/01/cape-cloak-161942__340.png
+https://cdn.pixabay.com/photo/2017/04/29/14/36/high-2270870__340.png
+https://cdn.pixabay.com/photo/2017/08/04/15/51/skirt-2580503__340.png
 man
 https://cdn.pixabay.com/photo/2012/04/10/22/46/red-hat-26734__340.png
 https://cdn.pixabay.com/photo/2012/04/05/01/01/athletic-shoes-25493__180.png
@@ -18,3 +26,9 @@ https://cdn.pixabay.com/photo/2013/07/13/10/45/shoes-157716__180.png
 https://cdn.pixabay.com/photo/2013/07/13/11/44/hat-158569_960_720.png
 https://cdn.pixabay.com/photo/2012/04/14/16/20/t-shirt-34481_960_720.png
 https://cdn.pixabay.com/photo/2017/01/13/04/56/blank-1976334_960_720.png
+https://cdn.pixabay.com/photo/2013/07/12/13/50/necktie-147395_960_720.png
+https://cdn.pixabay.com/photo/2016/08/20/12/41/pants-1607444__340.png
+https://cdn.pixabay.com/photo/2013/07/13/14/01/chemise-161966__340.png
+https://cdn.pixabay.com/photo/2012/04/14/13/51/tee-34001__340.png
+https://cdn.pixabay.com/photo/2013/07/12/12/20/shirt-145585__340.png
+https://cdn.pixabay.com/photo/2012/04/11/18/00/putting-hat-on-29177__340.png
