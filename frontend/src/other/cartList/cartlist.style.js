@@ -15,9 +15,10 @@ border-bottom: 1px solid lightgray;
 `
 
 
-export const Image = styled.image`
-    width: 100%;
-    height:  85%;
+export const Image = styled.img`
+    width: 250px;
+    height:  100%;
+    object-fit: contain;
 flex: 1;
 @media(max-width: 600px){
  flex: 2;
@@ -65,15 +66,15 @@ color: gray;
 }
 ` 
 export const Color = styled.div`
-width: 20px;
-height: 20px;
-border: black;
-background: red;
+    width: 30px;
+    height: 30px;
+border: 2px solid ${props => props.color};
+background-color: ${props => props.color};
 border-radius: 50%;
-@media(max-width: 600px){
-    width: 20px;
-    height: 20px;
-}
+/* @media(max-width: 600px){
+    width: 10px;
+    height: 10px;
+} */
 ` 
 export const Other = styled.div`
     display: flex;

@@ -8,7 +8,7 @@ import Register from './pages/Register'
 import Login  from './pages/Login'
 // import { useNavigate } from 'react-router-dom'
 // import Pay from './comps/stripe-test/Pay'
-// import Sucess from './comps/stripe-test/Sucess'
+import Sucess from './comps/stripe-test/Sucess'
 import  {createGlobalStyle } from 'styled-components'
 import { Routes, Route} from 'react-router-dom'
 const GlobalStyle = createGlobalStyle`
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `
 function App() {
-  const user = true
+  const user = false
   return (
    <div className="App">
       <GlobalStyle />
@@ -38,6 +38,7 @@ function App() {
       <Route path='/cart'  element={  user ?  <Cart /> : <Login /> } />
       <Route path='/register'  element={ <Register />} />
       <Route path='/login' element={ user ?  <Products /> :  <Login />} />
+      <Route path='/sucess' element={ <Sucess />} />
       </Routes>
   
     </div>

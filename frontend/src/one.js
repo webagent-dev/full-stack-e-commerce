@@ -13,6 +13,8 @@ import { default as data } from './data'
 import { default as ProductList } from './other/product/ProductList'
 import { default as CartList } from './other/cartList/CartList'
 import { default as Cat } from './other/cat/Cat'
+import { default as Empty } from './other/empty/Empty'
+import { default as Loader } from './other/loader/Loader'
 
 
 
@@ -21,5 +23,5 @@ import { default as Cat } from './other/cat/Cat'
 
 export {
     Deal, Header,Slider,data,Category,Product, Cat,ProductList, Newletter,
-    Footer, ListProduct, Carts, Singlepage, CartList
+    Footer, ListProduct, Carts, Singlepage, CartList, Empty, Loader
 }

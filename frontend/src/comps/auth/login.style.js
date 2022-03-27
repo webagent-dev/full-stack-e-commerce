@@ -26,7 +26,7 @@ export const Title = style.div`
     font-size: 30px;
     font-family: monospace;
 `
-export const InputWrapper = style.div`
+export const InputWrapper = style.form`
     display: flex;
     align-items: center;
     justify-content: center;
